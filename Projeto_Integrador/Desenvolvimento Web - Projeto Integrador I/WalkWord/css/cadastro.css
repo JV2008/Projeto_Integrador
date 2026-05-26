@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  font-family: 'Inter', sans-serif;
+  height: 100vh;
+  background-color: #faf9f6;
+  overflow: hidden;
+}
+
+.esquerda {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: auto;
+  padding: 40px 0;
+}
+
+.direita {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/login_img.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.16);
+  z-index: 1;
+}
+
+.conteudo_imagem {
+  width: 80%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.botao_imagem {
+  width: max-content;
+  padding: 10px 18px;
+  border-radius: 20px;
+  border: none;
+  background-color: #f2f3f1;
+  color: #4d5c41;
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.conteudo_imagem h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  color: #162210;
+  line-height: 1.1;
+  margin-bottom: 15px;
+}
+
+.conteudo_imagem h1 span {
+  font-weight: 600;
+}
+
+.conteudo_imagem h1 em {
+  font-style: italic;
+  font-weight: 600;
+}
+
+.conteudo_imagem p {
+  font-size: 1.15rem;
+  color: #3b4534;
+  line-height: 1.6;
+  max-width: 90%;
+}
+
+.conteudo_formulario {
+  width: 65%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+}
+
+.titulo_formulario {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #536047;
+  margin-bottom: 6px;
+}
+
+.subtitulo_formulario {
+  font-size: 1.05rem;
+  color: #61625f;
+  margin-bottom: 25px;
+}
+
+.formulario_cadastro {
+  display: flex;
+  flex-direction: column;
+}
+
+.label_campo {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #333;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.input_campo {
+  padding: 14px 18px;
+  border: none;
+  border-radius: 12px;
+  background-color: #f2f1ec;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  margin-bottom: 15px;
+  width: 100%;
+  outline: none;
+}
+
+.input_campo::placeholder {
+  color: #aaa;
+}
+
+.linha_dupla {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+
+.campo_metade {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.botao_cadastrar {
+  padding: 15px;
+  background-color: #536047;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'Inter', sans-serif;
+  margin-top: 10px;
+}
+
+.botao_cadastrar:hover {
+  background-color: #404a37;
+}
+
+.texto_login {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #61625f;
+  margin-bottom: 20px;
+  margin-top: 4vh;
+}
+
+.link_login {
+  color: #7b4a3a;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.link_login:hover {
+  text-decoration: underline;
+}
+
+.esquerda::-webkit-scrollbar {
+  width: 6px;
+}
+
+.esquerda::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.esquerda::-webkit-scrollbar-thumb {
+  background: #d4d4d1;
+  border-radius: 4px;
+}
+
+.esquerda::-webkit-scrollbar-thumb:hover {
+  background: #bbb;
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  .direita {
+    display: none;
+  }
+  .esquerda {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    padding: 30px 0;
+    overflow-y: visible;
+  }
+  .conteudo_formulario {
+    width: 85%;
+  }
+  .linha_dupla {
+    flex-direction: column;
+    gap: 0;
+  }
+  .campo_metade {
+    width: 100%;
+  }
+  .titulo_formulario {
+    font-size: 2.2rem;
+  }
+}
