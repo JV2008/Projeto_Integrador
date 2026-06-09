@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preferências - João da Silva</title>
+    <!-- Google Fonts for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Link to the shared premium profile stylesheet -->
+    <link rel="stylesheet" href="../css/impacto.css">
+    
+
+</head>
+<body>
+
+    <!-- GLOBAL NAVBAR -->
+    <header class="global-navbar">
+        <section class="areaLogo">
+            <img src="../img/logoWW.png" alt="">
+            <h2>WalkWord</h2>
+        </section>
+
+        <ul>
+            <li>Catálogo</li>
+            <li>Novidades</li>
+            <li>Seminovo</li>
+            <li>Impacto</li>
+        </ul>
+
+        <section class="areaIcones">
+            <img src="../img/iconesHeader/lupa.png" alt="">
+            <img src="../img/iconesHeader/user.png" alt="">
+            <img src="../img/iconesHeader/bag.png" alt="">
+        </section>
+    </header>
+
+    <div class="espacoSobHeader"></div>
+
+    <div class="dashboard-container">
+        
+        <!-- HEADER SECTION -->
+        <header class="profile-header">
+            <div class="avatar-circle">JD</div>
+            <div class="profile-info">
+                <h1 class="user-name">João da Silva</h1>
+                <div class="badge-row">
+                    <span class="badge-green">Nível: Guardião Verde</span>
+                    <span class="user-points">1.250 pontos</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- NAVIGATION TABS -->
+        <nav class="navigation-tabs">
+            <a href="impacto.html" class="tab-btn" id="tab-btn-impacto">Impacto</a>
+            <a href="pedidos.html" class="tab-btn" id="tab-btn-pedidos">Pedidos</a>
+            <a href="favoritos.html" class="tab-btn" id="tab-btn-favoritos">Favoritos</a>
+            <a href="preferencias.html" class="tab-btn active" id="tab-btn-preferencias">Preferências</a>
+            <a href="configuracoes.html" class="tab-btn" id="tab-btn-configuracoes">Configurações</a>
+        </nav>
+
+        <!-- TAB CONTENT CONTAINER -->
+        <main class="tab-content-wrapper">
+            
+            <div class="card-section">
+                <h2 class="section-title">Minhas Preferências</h2>
+                
+                <div class="preferencia-group">
+                    <h3 class="group-title">Tamanho Padrão</h3>
+                    <div class="chips-flex">
+                        <span class="chip-item size-chip" data-size="PP">PP</span>
+                        <span class="chip-item size-chip" data-size="P">P</span>
+                        <span class="chip-item size-chip active" data-size="M">M</span>
+                        <span class="chip-item size-chip" data-size="G">G</span>
+                        <span class="chip-item size-chip" data-size="GG">GG</span>
+                    </div>
+                </div>
+
+                <div class="preferencia-group">
+                    <h3 class="group-title">Cores Preferidas</h3>
+                    <div class="chips-flex">
+                        <span class="chip-item color-chip cor-preto active" data-color="Preto">Preto</span>
+                        <span class="chip-item color-chip cor-branco" data-color="Branco">Branco</span>
+                        <span class="chip-item color-chip cor-bege active" data-color="Bege">Bege</span>
+                        <span class="chip-item color-chip cor-verde" data-color="Verde">Verde</span>
+                        <span class="chip-item color-chip cor-azul" data-color="Azul">Azul</span>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- GLOBAL FOOTER -->
+    <footer>
+        <div class="footer__colunas">
+
+            <div class="footer__coluna">
+                <h4>Institucional</h4>
+                <ul>
+                    <li>Sobre Nós</li>
+                    <li>Como Funciona</li>
+                    <li>Trabalhe Conosco</li>
+                </ul>
+            </div>
+
+            <div class="footer__coluna">
+                <h4>Suporte</h4>
+                <ul>
+                    <li>FAQ</li>
+                    <li>Envios e Devoluções</li>
+                    <li>Fale Conosco</li>
+                </ul>
+            </div>
+
+            <div class="footer__coluna">
+                <h4>Sustentabilidade</h4>
+                <ul>
+                    <li>Hub Eco</li>
+                    <li>Nosso Impacto</li>
+                    <li>Certificações</li>
+                </ul>
+            </div>
+
+            <div class="footer__coluna">
+                <h4>Redes Sociais</h4>
+                <div class="footer__redesSociais">
+                    <span class="footer__iconeRede">📷</span>
+                    <span class="footer__iconeRede">f</span>
+                    <span class="footer__iconeRede">𝕏</span>
+                </div>
+                <h4 style="margin-top: 1rem;">Formas de Pagamento</h4>
+                <div class="footer__pagamentos">
+                    <span class="footer__pag">PIX</span>
+                    <span class="footer__pag">Cartão</span>
+                    <span class="footer__pag">Boleto</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer__rodape">
+            <span>© 2026 WalkWord. Todos os direitos reservados.</span>
+            <div class="footer__links">
+                <span>Privacidade</span>
+                <span>Termos de Uso</span>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- NOTIFICATION TOAST -->
+    <div id="toast" class="toast-notification">Configuração salva com sucesso!</div>
+
+    <script src="../js/preferencias.js"></script>
+</body>
+</html>

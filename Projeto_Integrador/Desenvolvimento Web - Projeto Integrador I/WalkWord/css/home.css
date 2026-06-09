@@ -63,7 +63,7 @@ li{
 /* ======== CAPA ======== */
 
 .capa{
-    background-image: url(/img/fundoCapa.png);
+    background-image: url(../img/fundoCapa.png);
     background-position: center;
     background-size: contain;
     display: flex;

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - João da Silva</title>
+    <!-- Google Fonts for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Chart.js for pixel-perfect dynamic charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../css/impacto.css">
+    
+
+</head>
+<body>
+
+    <!-- GLOBAL NAVBAR -->
+    <header class="global-navbar">
+        <section class="areaLogo">
+            <img src="../img/logoWW.png" alt="">
+            <h2>WalkWord</h2>
+        </section>
+
+        <ul>
+            <li>Catálogo</li>
+            <li>Novidades</li>
+            <li>Seminovo</li>
+            <li>Impacto</li>
+        </ul>
+
+        <section class="areaIcones">
+            <img src="../img/iconesHeader/lupa.png" alt="">
+            <img src="../img/iconesHeader/user.png" alt="">
+            <img src="../img/iconesHeader/bag.png" alt="">
+        </section>
+    </header>
+
+    <div class="espacoSobHeader"></div>
+
+    <div class="dashboard-container">
+        
+        <!-- HEADER SECTION -->
+        <header class="profile-header">
+            <div class="avatar-circle">JD</div>
+            <div class="profile-info">
+                <h1 class="user-name">João da Silva</h1>
+                <div class="badge-row">
+                    <span class="badge-green">Nível: Guardião Verde</span>
+                    <span class="user-points">1.250 pontos</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- NAVIGATION TABS -->
+        <nav class="navigation-tabs">
+            <a href="impacto.html" class="tab-btn active" id="tab-btn-impacto">Impacto</a>
+            <a href="pedidos.html" class="tab-btn" id="tab-btn-pedidos">Pedidos</a>
+            <a href="favoritos.html" class="tab-btn" id="tab-btn-favoritos">Favoritos</a>
+            <a href="preferencias.html" class="tab-btn" id="tab-btn-preferencias">Preferências</a>
+            <a href="configuracoes.html" class="tab-btn" id="tab-btn-configuracoes">Configurações</a>
+        </nav>
+
+        <!-- TAB CONTENT CONTAINER -->
+        <main class="tab-content-wrapper">
+            
+            <!-- TAB: IMPACTO (Active by Default) -->
+            <section class="tab-pane active" id="tab-impacto">
+                
+                <!-- SUMMARY CARDS -->
+                <div class="impact-cards-grid">
+                    <div class="impact-card card-blue">
+                        <div class="card-icon">💧</div>
+                        <div class="card-data">
+                            <span class="card-value value-blue">2540L</span>
+                            <span class="card-label label-blue">Água economizada</span>
+                        </div>
+                    </div>
+                    <div class="impact-card card-grey">
+                        <div class="card-icon">📈</div>
+                        <div class="card-data">
+                            <span class="card-value value-grey">14.6kg</span>
+                            <span class="card-label label-grey">CO₂ evitado</span>
+                        </div>
+                    </div>
+                    <div class="impact-card card-green">
+                        <div class="card-icon">♻️</div>
+                        <div class="card-data">
+                            <span class="card-value value-green">6</span>
+                            <span class="card-label label-green">Peças sustentáveis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CHARTS PANEL -->
+                <div class="charts-stack">
+                    <div class="chart-card">
+                        <h2 class="chart-title">Economia de Água (L)</h2>
+                        <div class="chart-container">
+                            <canvas id="waterChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-card">
+                        <h2 class="chart-title">Redução de CO₂ (kg)</h2>
+                        <div class="chart-container">
+                            <canvas id="co2Chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BOTTOM BANNER -->
+                <div class="achievement-banner">
+                    <span class="achievement-icon">🏆</span>
+                    <div class="achievement-text">
+                        <span class="achievement-badge">Conquista Desbloqueada</span>
+                        <span class="achievement-title">Top 5% consumidores sustentáveis do mês!</span>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- TAB: PEDIDOS (Hidden by Default) -->
+            <section class="tab-pane" id="tab-pedidos">
+                <div class="card-section">
+                    <h2 class="section-title">Lista de Pedidos</h2>
+                    <div class="pedidos-list">
+                        <!-- Pedido #1 -->
+                        <div class="pedido-item" data-id="1">
+                            <div class="pedido-left">
+                                <strong class="pedido-code">Pedido #1</strong>
+                                <p class="pedido-date">19/04/2026 &middot; 2 itens</p>
+                            </div>
+                            <div class="pedido-right">
+                                <span class="badge-status success">Entregue</span>
+                                <span class="pedido-price">R$ 289.90</span>
+                            </div>
+                        </div>
+                        <!-- Pedido #2 -->
+                        <div class="pedido-item" data-id="2">
+                            <div class="pedido-left">
+                                <strong class="pedido-code">Pedido #2</strong>
+                                <p class="pedido-date">14/04/2026 &middot; 1 item</p>
+                            </div>
+                            <div class="pedido-right">
+                                <span class="badge-status info">Em Trânsito</span>
+                                <span class="pedido-price">R$ 189.90</span>
+                            </div>
+                        </div>
+                        <!-- Pedido #3 -->
+                        <div class="pedido-item" data-id="3">
+                            <div class="pedido-left">
+                                <strong class="pedido-code">Pedido #3</strong>
+                                <p class="pedido-date">09/04/2026 &middot; 3 itens</p>
+                            </div>
+                            <div class="pedido-right">
+                                <span class="badge-status success">Entregue</span>
+                                <span class="pedido-price">R$ 449.80</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB: PREFERÊNCIAS (Hidden by Default) -->
+            <section class="tab-pane" id="tab-preferencias">
+                <div class="card-section">
+                    <h2 class="section-title">Minhas Preferências</h2>
+                    
+                    <div class="preferencia-group">
+                        <h3 class="group-title">Tamanho Padrão</h3>
+                        <div class="chips-flex">
+                            <span class="chip-item size-chip" data-size="PP">PP</span>
+                            <span class="chip-item size-chip" data-size="P">P</span>
+                            <span class="chip-item size-chip active" data-size="M">M</span>
+                            <span class="chip-item size-chip" data-size="G">G</span>
+                            <span class="chip-item size-chip" data-size="GG">GG</span>
+                        </div>
+                    </div>
+
+                    <div class="preferencia-group">
+                        <h3 class="group-title">Cores Preferidas</h3>
+                        <div class="chips-flex">
+                            <span class="chip-item color-chip cor-preto active" data-color="Preto">Preto</span>
+                            <span class="chip-item color-chip cor-branco" data-color="Branco">Branco</span>
+                            <span class="chip-item color-chip cor-bege active" data-color="Bege">Bege</span>
+                            <span class="chip-item color-chip cor-verde" data-color="Verde">Verde</span>
+                            <span class="chip-item color-chip cor-azul" data-color="Azul">Azul</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB: CONFIGURAÇÕES (Hidden by Default) -->
+            <section class="tab-pane" id="tab-configuracoes">
+                <div class="card-section">
+                    <h2 class="section-title">Configurações da Conta</h2>
+                    
+                    <div class="config-item">
+                        <h3 class="config-label">E-mail</h3>
+                        <p class="config-value-text">joao.silva@email.com</p>
+                    </div>
+
+                    <hr class="config-divider">
+
+                    <div class="config-item">
+                        <h3 class="config-label-large">Notificações</h3>
+                        
+                        <div class="checkbox-wrapper">
+                            <label class="custom-checkbox-container">
+                                <input type="checkbox" id="notify-promo" checked>
+                                <span class="checkbox-checkmark"></span>
+                                Receber novidades e promoções
+                            </label>
+                        </div>
+
+                        <div class="checkbox-wrapper">
+                            <label class="custom-checkbox-container">
+                                <input type="checkbox" id="notify-reports" checked>
+                                <span class="checkbox-checkmark"></span>
+                                Relatórios mensais de impacto
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- GLOBAL FOOTER -->
+    <footer>
+        <div class="footer__colunas">
+
+            <div class="footer__coluna">
+                <h4>Institucional</h4>
+                <ul>
+                    <li>Sobre Nós</li>
+                    <li>Como Funciona</li>
+                    <li>Trabalhe Conosco</li>
+                </ul>
+            </div>
+
+            <div class="footer__coluna">
+                <h4>Suporte</h4>
+                <ul>
+                    <li>FAQ</li>
+                    <li>Envios e Devoluções</li>
+                    <li>Fale Conosco</li>
+                </ul>
+            </div>
+
+            <div class="footer__coluna">
+                <h4>Sustentabilidade</h4>
+                <ul>
+                    <li>Hub Eco</li>
+                    <li>Nosso Impacto</li>
+                    <li>Certificações</li>
+                </ul>
+            </div>
+
+            <div class="footer__coluna">
+                <h4>Redes Sociais</h4>
+                <div class="footer__redesSociais">
+                    <span class="footer__iconeRede">📷</span>
+                    <span class="footer__iconeRede">f</span>
+                    <span class="footer__iconeRede">𝕏</span>
+                </div>
+                <h4 style="margin-top: 1rem;">Formas de Pagamento</h4>
+                <div class="footer__pagamentos">
+                    <span class="footer__pag">PIX</span>
+                    <span class="footer__pag">Cartão</span>
+                    <span class="footer__pag">Boleto</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer__rodape">
+            <span>© 2026 WalkWord. Todos os direitos reservados.</span>
+            <div class="footer__links">
+                <span>Privacidade</span>
+                <span>Termos de Uso</span>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- NOTIFICATION TOAST -->
+    <div id="toast" class="toast-notification">Configuração salva com sucesso!</div>
+
+    <script src="../js/impacto.js"></script>
+</body>
+</html>
