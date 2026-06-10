@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WallWord - Loja Virtual</title>
+    <link rel="stylesheet" href="../css/Catalogo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">WalkWord</div>
+            <nav class="main-navigation">
+                <ul>
+                    <li><a href="#">Catálogo</a></li>
+                    <li><a href="#">Novidades</a></li>
+                    <li><a href="#">Ganhe mais</a></li>
+                    <li><a href="#">Impacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <button aria-label="Buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button aria-label="Perfil"><i class="fa-regular fa-user"></i></button>
+                <button aria-label="Carrinho"><i class="fa-solid fa-bag-shopping"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+
+        <div class="catalog-container">
+
+            <aside class="filters-sidebar">
+                <h3>Filtros</h3>
+
+                <div class="filter-group" data-filter-group="condicao">
+                    <h4>Condição</h4>
+                    <label><input type="checkbox" data-filter="condicao" data-value="nova"> Novas</label>
+                    <label><input type="checkbox" data-filter="condicao" data-value="seminova"> Semi-novas</label>
+                    <label><input type="checkbox" data-filter="condicao" data-value="usada"> Usadas</label>
+                </div>
+
+                <div class="filter-group" data-filter-group="categoria">
+                    <h4>Categoria</h4>
+                    <label><input type="checkbox" data-filter="categoria" data-value="jaquetas"> Jaquetas</label>
+                    <label><input type="checkbox" data-filter="categoria" data-value="vestidos"> Vestidos</label>
+                    <label><input type="checkbox" data-filter="categoria" data-value="calcas"> Calças</label>
+                    <label><input type="checkbox" data-filter="categoria" data-value="blusas"> Blusas</label>
+                    <label><input type="checkbox" data-filter="categoria" data-value="camisetas"> Camisetas</label>
+                    <label><input type="checkbox" data-filter="categoria" data-value="saias"> Saias</label>
+                    <label><input type="checkbox" data-filter="categoria" data-value="moletoms"> Moletons</label>
+                    <label><input type="checkbox" data-filter="categoria" data-value="shorts"> Shorts</label>
+                </div>
+
+                <div class="filter-group" data-filter-group="tamanho">
+                    <h4>Tamanho</h4>
+                    <div class="size-options">
+                        <label class="size-option"><input type="checkbox" data-filter="tamanho" data-value="pp"> PP</label>
+                        <label class="size-option"><input type="checkbox" data-filter="tamanho" data-value="p"> P</label>
+                        <label class="size-option"><input type="checkbox" data-filter="tamanho" data-value="m"> M</label>
+                        <label class="size-option"><input type="checkbox" data-filter="tamanho" data-value="g"> G</label>
+                        <label class="size-option"><input type="checkbox" data-filter="tamanho" data-value="gg"> GG</label>
+                        <label class="size-option"><input type="checkbox" data-filter="tamanho" data-value="xg"> XG</label>
+                        <label class="size-option"><input type="checkbox" data-filter="tamanho" data-value="36"> 36</label>
+                        <label class="size-option"><input type="checkbox" data-filter="tamanho" data-value="38"> 38</label>
+                        <label class="size-option"><input type="checkbox" data-filter="tamanho" data-value="40"> 40</label>
+                        <label class="size-option"><input type="checkbox" data-filter="tamanho" data-value="42"> 42</label>
+                        <label class="size-option"><input type="checkbox" data-filter="tamanho" data-value="44"> 44</label>
+                        <label class="size-option"><input type="checkbox" data-filter="tamanho" data-value="46"> 46</label>
+                    </div>
+                </div>
+
+                <button class="clear-filters-btn">Limpar Filtros</button>
+            </aside>
+
+            <section class="products-section">
+                <div class="products-header">
+                    <span class="results-count">20 produtos encontrados</span>
+                    <div class="sort-options">
+                        <select aria-label="Ordenar por">
+                            <option>Relevância</option>
+                            <option>Menor Preço</option>
+                            <option>Maior Preço</option>
+                        </select>
+                        <button class="grid-view-btn active" aria-label="Visualização em Grade"><i class="fa-solid fa-grip"></i></button>
+                    </div>
+                </div>
+
+                <div class="products-grid">
+
+                    <article class="product-card"
+                             data-condicao="nova"
+                             data-categoria="jaquetas"
+                             data-tamanho="g">
+                        <div class="card-image-wrapper">
+                            <span class="badge badge-new">Novo</span>
+                            <span class="badge badge-eco">90% Eco</span>
+                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                            <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500" alt="Jaqueta Denim Sustentável">
+                        </div>
+                        <div class="card-info">
+                            <h3>Jaqueta Denim Sustentável</h3>
+                            <p class="price">R$ 239,90</p>
+                            <div class="card-meta"><span>10%</span><span>Brechó</span></div>
+                        </div>
+                    </article>
+
+                    <article class="product-card"
+                             data-condicao="nova"
+                             data-categoria="vestidos"
+                             data-tamanho="m">
+                        <div class="card-image-wrapper">
+                            <span class="badge badge-new">Novo</span>
+                            <span class="badge badge-eco">Algodão</span>
+                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                            <img src="https://images.unsplash.com/photo-1612336307429-8a898d10e223?w=500" alt="Vestido Linho Natural">
+                        </div>
+                        <div class="card-info">
+                            <h3>Vestido Linho Natural</h3>
+                            <p class="price">R$ 189,90</p>
+                            <div class="card-meta"><span>10%</span><span>Brechó</span></div>
+                        </div>
+                    </article>
+
+                    <article class="product-card"
+                             data-condicao="seminova"
+                             data-categoria="calcas"
+                             data-tamanho="g">
+                        <div class="card-image-wrapper">
+                            <span class="badge badge-recycled">Reciclado</span>
+                            <span class="badge badge-eco">90% Eco</span>
+                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                            <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=500" alt="Calça Cargo Reciclada">
+                        </div>
+                        <div class="card-info">
+                            <h3>Calça Cargo Reciclada</h3>
+                            <p class="price">R$ 159,90</p>
+                            <div class="card-meta"><span>10%</span><span>Brechó</span></div>
+                        </div>
+                    </article>
+
+                    <article class="product-card"
+                             data-condicao="seminova"
+                             data-categoria="blusas"
+                             data-tamanho="gg">
+                        <div class="card-image-wrapper">
+                            <span class="badge badge-eco">Seminovo</span>
+                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=500" alt="Blazer Alfaiataria Clássico">
+                        </div>
+                        <div class="card-info">
+                            <h3>Blazer Alfaiataria Clássico</h3>
+                            <p class="price">R$ 199,90</p>
+                            <div class="card-meta"><span>10%</span><span>Brechó</span></div>
+                        </div>
+                    </article>
+
+                    <article class="product-card"
+                             data-condicao="nova"
+                             data-categoria="camisetas"
+                             data-tamanho="p">
+                        <div class="card-image-wrapper">
+                            <span class="badge badge-new">Novo</span>
+                            <span class="badge badge-eco">Algodão</span>
+                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                            <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500" alt="Camiseta Básica Orgânica">
+                        </div>
+                        <div class="card-info">
+                            <h3>Camiseta Básica Orgânica</h3>
+                            <p class="price">R$ 79,90</p>
+                            <div class="card-meta"><span>10%</span><span>Brechó</span></div>
+                        </div>
+                    </article>
+
+                    <article class="product-card"
+                             data-condicao="nova"
+                             data-categoria="saias"
+                             data-tamanho="pp">
+                        <div class="card-image-wrapper">
+                            <span class="badge badge-new">Novo</span>
+                            <span class="badge badge-eco">Algodão</span>
+                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                            <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=500" alt="Saia Midi Plissada">
+                        </div>
+                        <div class="card-info">
+                            <h3>Saia Midi Plissada</h3>
+                            <p class="price">R$ 149,90</p>
+                            <div class="card-meta"><span>10%</span><span>Brechó</span></div>
+                        </div>
+                    </article>
+
+                    <article class="product-card"
+                             data-condicao="seminova"
+                             data-categoria="moletoms"
+                             data-tamanho="g">
+                        <div class="card-image-wrapper">
+                            <span class="badge badge-eco">Seminovo</span>
+                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                            <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=500" alt="Moletom Oversized">
+                        </div>
+                        <div class="card-info">
+                            <h3>Moletom Oversized</h3>
+                            <p class="price">R$ 129,90</p>
+                            <div class="card-meta"><span>10%</span><span>Brechó</span></div>
+                        </div>
+                    </article>
+
+                    <article class="product-card"
+                             data-condicao="seminova"
+                             data-categoria="shorts"
+                             data-tamanho="42">
+                        <div class="card-image-wrapper">
+                            <span class="badge badge-eco">Seminovo</span>
+                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                            <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=500" alt="Shorts Jeans Vintage">
+                        </div>
+                        <div class="card-info">
+                            <h3>Shorts Jeans Vintage</h3>
+                            <p class="price">R$ 120,00</p>
+                            <div class="card-meta"><span>10%</span><span>Brechó</span></div>
+                        </div>
+                    </article>
+
+                    <article class="product-card"
+                             data-condicao="nova"
+                             data-categoria="blusas"
+                             data-tamanho="m">
+                        <div class="card-image-wrapper">
+                            <span class="badge badge-new">Novo</span>
+                            <span class="badge badge-eco">Linho</span>
+                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                            <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=500" alt="Blusa Linho Oversized">
+                        </div>
+                        <div class="card-info">
+                            <h3>Blusa Linho Oversized</h3>
+                            <p class="price">R$ 179,90</p>
+                            <div class="card-meta"><span>10%</span><span>Brechó</span></div>
+                        </div>
+                    </article>
+
+                    <article class="product-card"
+                             data-condicao="nova"
+                             data-categoria="camisetas"
+                             data-tamanho="g">
+                        <div class="card-image-wrapper">
+                            <span class="badge badge-new">Novo</span>
+                            <span class="badge badge-eco">Algodão</span>
+                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                            <img src="https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?w=500" alt="Camiseta Algodão Orgânica">
+                        </div>
+                        <div class="card-info">
+                            <h3>Camiseta Algodão Orgânica</h3>
+                            <p class="price">R$ 89,90</p>
+                            <div class="card-meta"><span>10%</span><span>Brechó</span></div>
+                        </div>
+                    </article>
+
+                    <article class="product-card"
+                             data-condicao="nova"
+                             data-categoria="calcas"
+                             data-tamanho="gg">
+                        <div class="card-image-wrapper">
+                            <span class="badge badge-new">Novo</span>
+                            <span class="badge badge-eco">Poliéster Rec.</span>
+                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500" alt="Calça Alfaiataria Reciclada">
+                        </div>
+                        <div class="card-info">
+                            <h3>Calça Alfaiataria Reciclada</h3>
+                            <p class="price">R$ 219,90</p>
+                            <div class="card-meta"><span>10%</span><span>Brechó</span></div>
+                        </div>
+                    </article>
+
+                    <article class="product-card"
+                             data-condicao="seminova"
+                             data-categoria="moletoms"
+                             data-tamanho="xg">
+                        <div class="card-image-wrapper">
+                            <span class="badge badge-recycled">Reciclado</span>
+                            <span class="badge badge-eco">90% Eco</span>
+                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                            <img src="https://images.unsplash.com/photo-1554568218-0f1715e72254?w=500" alt="Moletom Reciclado Unissex">
+                        </div>
+                        <div class="card-info">
+                            <h3>Moletom Reciclado Unissex</h3>
+                            <p class="price">R$ 159,90</p>
+                            <div class="card-meta"><span>10%</span><span>Brechó</span></div>
+                        </div>
+                    </article>
+
+                    <article class="product-card"
+                             data-condicao="seminova"
+                             data-categoria="vestidos"
+                             data-tamanho="p">
+                        <div class="card-image-wrapper">
+                            <span class="badge badge-eco">Seminovo</span>
+                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                            <img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=500" alt="Vestido Midi Seda">
+                        </div>
+                        <div class="card-info">
+                            <h3>Vestido Midi Seda</h3>
+                            <p class="price">R$ 249,90</p>
+                            <div class="card-meta"><span>10%</span><span>Brechó</span></div>
+                        </div>
+                    </article>
+
+                    <article class="product-card"
+                             data-condicao="nova"
+                             data-categoria="jaquetas"
+                             data-tamanho="m">
+                        <div class="card-image-wrapper">
+                            <span class="badge badge-new">Novo</span>
+                            <span class="badge badge-eco">90% Eco</span>
+                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                            <img src="https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=500" alt="Jaqueta Corta-Vento Eco">
+                        </div>
+                        <div class="card-info">
+                            <h3>Jaqueta Corta-Vento Eco</h3>
+                            <p class="price">R$ 289,90</p>
+                            <div class="card-meta"><span>10%</span><span>Brechó</span></div>
+                        </div>
+                    </article>
+
+                    <article class="product-card"
+                             data-condicao="seminova"
+                             data-categoria="blusas"
+                             data-tamanho="g">
+                        <div class="card-image-wrapper">
+                            <span class="badge badge-eco">Seminovo</span>
+                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                            <img src="https://images.unsplash.com/photo-1584917865442-de89df41afd8?w=500" alt="Blazer Linho Vintage">
+                        </div>
+                        <div class="card-info">
+                            <h3>Blazer Linho Vintage</h3>
+                            <p class="price">R$ 189,90</p>
+                            <div class="card-meta"><span>10%</span><span>Brechó</span></div>
+                        </div>
+                    </article>
+
+                    <article class="product-card"
+                             data-condicao="nova"
+                             data-categoria="saias"
+                             data-tamanho="pp">
+                        <div class="card-image-wrapper">
+                            <span class="badge badge-new">Novo</span>
+                            <span class="badge badge-eco">Algodão</span>
+                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                            <img src="https://images.unsplash.com/photo-1598532163257-ae3c6b2524b6?w=500" alt="Saia Linho Natural">
+                        </div>
+                        <div class="card-info">
+                            <h3>Saia Linho Natural</h3>
+                            <p class="price">R$ 139,90</p>
+                            <div class="card-meta"><span>10%</span><span>Brechó</span></div>
+                        </div>
+                    </article>
+
+                    <article class="product-card"
+                             data-condicao="seminova"
+                             data-categoria="shorts"
+                             data-tamanho="44">
+                        <div class="card-image-wrapper">
+                            <span class="badge badge-recycled">Reciclado</span>
+                            <span class="badge badge-eco">90% Eco</span>
+                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                            <img src="https://images.unsplash.com/photo-1609743522653-52354461eb27?w=500" alt="Shorts Cargo Reciclado">
+                        </div>
+                        <div class="card-info">
+                            <h3>Shorts Cargo Reciclado</h3>
+                            <p class="price">R$ 119,90</p>
+                            <div class="card-meta"><span>10%</span><span>Brechó</span></div>
+                        </div>
+                    </article>
+
+                    <article class="product-card"
+                             data-condicao="nova"
+                             data-categoria="jaquetas"
+                             data-tamanho="g">
+                        <div class="card-image-wrapper">
+                            <span class="badge badge-new">Novo</span>
+                            <span class="badge badge-eco">Poliester Rec.</span>
+                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=500" alt="Jaqueta Corta-Vento Estampa">
+                        </div>
+                        <div class="card-info">
+                            <h3>Jaqueta Corta-Vento Estampa</h3>
+                            <p class="price">R$ 259,90</p>
+                            <div class="card-meta"><span>10%</span><span>Brechó</span></div>
+                        </div>
+                    </article>
+
+                    <article class="product-card"
+                             data-condicao="usada"
+                             data-categoria="calcas"
+                             data-tamanho="42">
+                        <div class="card-image-wrapper">
+                            <span class="badge badge-eco">Usada</span>
+                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                            <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=500" alt="Calça Jeans Vintage">
+                        </div>
+                        <div class="card-info">
+                            <h3>Calça Jeans Vintage</h3>
+                            <p class="price">R$ 99,90</p>
+                            <div class="card-meta"><span>20%</span><span>Brechó</span></div>
+                        </div>
+                    </article>
+
+                    <article class="product-card"
+                             data-condicao="usada"
+                             data-categoria="vestidos"
+                             data-tamanho="p">
+                        <div class="card-image-wrapper">
+                            <span class="badge badge-eco">Usada</span>
+                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                            <img src="https://images.unsplash.com/photo-1595777467589-5b62bb8b5487?w=500" alt="Vestido floral Vintage">
+                        </div>
+                        <div class="card-info">
+                            <h3>Vestido Floral Vintage</h3>
+                            <p class="price">R$ 79,90</p>
+                            <div class="card-meta"><span>30%</span><span>Brechó</span></div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h3>Institucional</h3>
+                <ul>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Como Funciona</a></li>
+                    <li><a href="#">Trabalhe Conosco</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Suporte</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Trocas e Devoluções</a></li>
+                    <li><a href="#">Fale Conosco</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Sustentabilidade</h3>
+                <ul>
+                    <li><a href="#">Materiais</a></li>
+                    <li><a href="#">Nossos Produtores</a></li>
+                    <li><a href="#">Certificações</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Redes Sociais</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+                </div>
+                <div class="footer-badges">
+                    <span>Pix</span><span>Cartão</span><span>Boleto</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 WallWord. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="#">Privacidade</a>
+                <a href="#">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/catalogo.js"></script>
+</body>
+</html>
