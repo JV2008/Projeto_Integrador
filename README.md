@@ -1,5 +1,5 @@
 <h1 align="center">
-   <img src="file:///C:/Users/joaov/Desktop/Projeto_Integrador/Projeto_Integrador/Desenvolvimento%20Web%20-%20Projeto%20Integrador%20I/WalkWord/img/logoWW.png" width="350"/>
+   ![Logo do walkword](https://www.image2url.com/r2/default/images/1781227788668-85f8b277-4e1f-428b-aa62-19d424c8e443.png
   <br/>
   🌿 Walkword — Loja Sustentável
 </h1>
