@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sacola de Compras - WalkWord</title>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+    <!-- SweetAlert2 for beautiful alerts -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- IMask for input masking -->
+    <script src="https://cdn.jsdelivr.net/npm/imask@7"></script>
+    <!-- Page Stylesheet -->
+    <link rel="stylesheet" href="../css/carrinho.css" />
+</head>
+<body>
+
+    <!-- ======== NAVBAR ======== -->
+    <header>
+        <a href="home.html">
+            <section class="areaLogo">
+                <img src="../img/logoWW.png" alt="WalkWord Logo">
+                <h2>WalkWord</h2>
+            </section>
+        </a>
+
+        <ul>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="home.html#nov">Novidades</a></li>
+            <li><a href="catalogo.html">Seminovo</a></li>
+            <li><a href="impacto.html">Impacto</a></li>
+        </ul>
+
+        <section class="areaIcones">
+            <a href="catalogo.html"><img src="../img/iconesHeader/lupa.png" alt="Lupa"></a>
+            <a href="impacto.html"><img src="../img/iconesHeader/user.png" alt="Usuário"></a>
+            <a href="carrinho.html"><img src="../img/iconesHeader/bag.png" alt="Sacola de Compras"></a>
+        </section>
+    </header>
+
+    <div class="espacoSobHeader"></div>
+
+    <!-- ======== MAIN CONTENT ======== -->
+    <main class="cart-container">
+        
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+            <a href="home.html">Início</a> / <span>Sacola de Compras</span>
+        </nav>
+
+        <!-- Dynamic Cart Layout -->
+        <div class="cart-layout" id="cart-layout-container">
+            
+            <!-- Product List Panel -->
+            <section class="cart-left">
+                <div class="cart-header-title">
+                    <h1>Sacola de Compras</h1>
+                    <span id="cart-item-count">0 itens na sua sacola</span>
+                </div>
+
+                <!-- Product Table/List Container -->
+                <div class="cart-items-card">
+                    <!-- Header of List (Desktop Only) -->
+                    <div class="cart-items-header">
+                        <span class="col-prod">Produto</span>
+                        <span class="col-price">Preço</span>
+                        <span class="col-qty">Quantidade</span>
+                        <span class="col-total">Preço Total</span>
+                    </div>
+                    
+                    <!-- Items Wrapper -->
+                    <div id="cart-items-list">
+                        <!-- Dynamic Cart Items injected here by JS -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sidebar Panel (Totals and Shipping) -->
+            <aside class="cart-right">
+                
+                <!-- Shipping Calculator -->
+                <div class="sidebar-card">
+                    <h3>Cálculo de Frete</h3>
+                    <div class="form-group">
+                        <select id="shipping-country" aria-label="País">
+                            <option value="BR">Brasil</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" id="shipping-state-city" placeholder="Estado / Cidade" />
+                        <input type="text" id="shipping-cep" placeholder="CEP (00000-000)" />
+                    </div>
+                    <button id="btn-update-shipping" class="btn-sidebar">Calcular</button>
+                </div>
+
+                <!-- Coupon Code -->
+                <div class="sidebar-card">
+                    <h3>Cupom de Desconto</h3>
+                    <p class="coupon-desc">Insira seu cupom de desconto caso possua um para aplicar ao total da compra.</p>
+                    <div class="form-group">
+                        <input type="text" id="coupon-input" placeholder="Código do Cupom" />
+                    </div>
+                    <button id="btn-apply-coupon" class="btn-sidebar">Aplicar</button>
+                </div>
+
+                <!-- Cart Total Panel -->
+                <div class="totals-card">
+                    <h2>Resumo da Sacola</h2>
+                    
+                    <div class="total-row">
+                        <span>Subtotal do Carrinho</span>
+                        <span id="cart-subtotal">R$ 0,00</span>
+                    </div>
+                    
+                    <div class="total-row">
+                        <span>Frete</span>
+                        <span id="cart-shipping">Grátis</span>
+                    </div>
+
+                    <div class="total-row discount-row" id="discount-wrapper" style="display: none;">
+                        <span>Desconto (<span id="coupon-name"></span>)</span>
+                        <span id="cart-discount">-R$ 0,00</span>
+                    </div>
+
+                    <hr class="totals-divider" />
+
+                    <div class="total-row grand-total">
+                        <span>Total da Sacola</span>
+                        <span id="cart-grand-total">R$ 0,00</span>
+                    </div>
+
+                    <!-- Impact indicator inside totals card -->
+                    <div class="cart-impact-badge">
+                        <div class="impact-badge-title">
+                            <i class="fa-solid fa-leaf"></i>
+                            <span>Impacto ecológico desta compra</span>
+                        </div>
+                        <div class="impact-badge-values">
+                            <span>💧 <strong id="impact-water">0L</strong> de água economizados</span>
+                            <span>👟 <strong id="impact-co2">0kg</strong> de CO₂ evitado</span>
+                        </div>
+                    </div>
+
+                    <button id="btn-checkout" class="btn-checkout-primary">Finalizar Compra</button>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Empty Cart State (Hidden by default, shown when cart is empty) -->
+        <div id="empty-cart-state" style="display: none;">
+            <div class="empty-cart-card">
+                <div class="empty-icon">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+                <h2>Sua sacola de compras está vazia!</h2>
+                <p>Navegue pelo nosso catálogo e descubra peças incríveis de moda sustentável e consciente.</p>
+                <a href="catalogo.html" class="btn-shop-now">Explorar Coleção</a>
+            </div>
+        </div>
+
+        <!-- ======== ADVANTAGES GRID ======== -->
+        <section class="advantages-grid">
+            <div class="advantage-item">
+                <div class="advantage-icon">🚚</div>
+                <div class="advantage-content">
+                    <h4>Frete Grátis</h4>
+                    <p>Nas compras acima de R$ 150</p>
+                </div>
+            </div>
+
+            <div class="advantage-item">
+                <div class="advantage-icon">📞</div>
+                <div class="advantage-content">
+                    <h4>Suporte 24/7</h4>
+                    <p>Telefone: +55 11 9999-9999</p>
+                </div>
+            </div>
+
+            <div class="advantage-item">
+                <div class="advantage-icon">💬</div>
+                <div class="advantage-content">
+                    <h4>Chat Online</h4>
+                    <p>Fale com nossa equipe a qualquer hora</p>
+                </div>
+            </div>
+
+            <div class="advantage-item">
+                <div class="advantage-icon">🎁</div>
+                <div class="advantage-content">
+                    <h4>Vale Presente</h4>
+                    <p>Adquira para quem você ama</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ======== FOOTER ======== -->
+    <footer>
+        <div class="footer__colunas">
+
+            <div class="footer__coluna">
+                <h4>Institucional</h4>
+                <ul>
+                    <li>Sobre Nós</li>
+                    <li>Como Funciona</li>
+                    <li>Trabalhe Conosco</li>
+                </ul>
+            </div>
+
+            <div class="footer__coluna">
+                <h4>Suporte</h4>
+                <ul>
+                    <li>FAQ</li>
+                    <li>Envios e Devoluções</li>
+                    <li>Fale Conosco</li>
+                </ul>
+            </div>
+
+            <div class="footer__coluna">
+                <h4>Sustentabilidade</h4>
+                <ul>
+                    <li>Hub Eco</li>
+                    <li>Nosso Impacto</li>
+                    <li>Certificações</li>
+                </ul>
+            </div>
+
+            <div class="footer__coluna">
+                <h4>Redes Sociais</h4>
+                <div class="footer__redesSociais">
+                    <span class="footer__iconeRede">📷</span>
+                    <span class="footer__iconeRede">f</span>
+                    <span class="footer__iconeRede">𝕏</span>
+                </div>
+                <h4 style="margin-top: 1rem;">Formas de Pagamento</h4>
+                <div class="footer__pagamentos">
+                    <span class="footer__pag">PIX</span>
+                    <span class="footer__pag">Cartão</span>
+                    <span class="footer__pag">Boleto</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer__rodape">
+            <span>© 2026 WalkWord. Todos os direitos reservados.</span>
+            <div class="footer__links">
+                <span>Privacidade</span>
+                <span>Termos de Uso</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/utils.js"></script>
+    <script src="../js/carrinho.js"></script>
+</body>
+</html>

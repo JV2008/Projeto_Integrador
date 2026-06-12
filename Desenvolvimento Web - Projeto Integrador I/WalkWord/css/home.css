@@ -211,6 +211,11 @@ li{
     flex-shrink: 0;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
 
 /* ======== DESTAQUES DA SEMANA ======== */
 

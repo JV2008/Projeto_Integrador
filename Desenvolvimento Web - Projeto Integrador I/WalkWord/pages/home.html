@@ -4,28 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - WalkWord</title>
-    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="../css/home.css">
 </head>
 <body>
 
     <header>
 
-        <section class="areaLogo">
-            <img src="/img/logoWW.png" alt="">
-            <h2>WalkWord</h2>
-        </section>
+        <a href="home.html">
+            <section class="areaLogo">
+                <img src="../img/logoWW.png" alt="">
+                <h2>WalkWord</h2>
+            </section>
+        </a>
 
         <ul>
-            <li>Catálogo</li>
-            <li>Novidades</li>
-            <li>Seminovo</li>
-            <li>Impacto</li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="#nov">Novidades</a></li>
+            <li><a href="catalogo.html">Seminovo</a></li>
+            <li><a href="impacto.html">Impacto</a></li>
         </ul>
 
         <section class="areaIcones">
-            <img src="/img/iconesHeader/lupa.png" alt="">
-            <img src="/img/iconesHeader/user.png" alt="">
-            <img src="/img/iconesHeader/bag.png" alt="">
+            <a href="catalogo.html"><img src="../img/iconesHeader/lupa.png" alt=""></a>
+            <a href="impacto.html"><img src="../img/iconesHeader/user.png" alt=""></a>
+            <a href="carrinho.html"><img src="../img/iconesHeader/bag.png" alt=""></a>
         </section>
 
     </header>
@@ -36,7 +38,7 @@
         <section class="textosCapa">
             <h1>Vista-se bem. Faça o bem.</h1>
             <p>Moda consciente que transforma cada peça em um gesto sustentável visível</p>
-            <input type="button" id="bttnCapa" value="Explorar Coleção Sustentável">
+            <a href="catalogo.html"><input type="button" id="bttnCapa" value="Explorar Coleção Sustentável"></a>
         </section>
     </section>
 
@@ -65,7 +67,9 @@
                 <span class="cardImpacto__label">Peças reinseridas no ciclo</span>
             </div>
         </div>
+        <div id="nov"></div>
     </section>
+
 
     <section class="destaquesSemana">
         <div class="destaquesSemana__titulo">
@@ -77,12 +81,11 @@
 
             <div class="cardProduto">
                 <div class="cardProduto__imagem">
-                    <img src="/img/produtos/jaqueta.png" alt="Jaqueta Denim Sustentável">
+                    <img src="/img/produtosHome/prod1.png" alt="Jaqueta Denim Sustentável">
                     <div class="cardProduto__badges">
                         <span class="badge badge--nova">✦ Nova</span>
-                        <span class="badge badge--ia">IA 82%</span>
                     </div>
-                    <button class="cardProduto__favorito">♡</button>
+                    
                 </div>
                 <div class="cardProduto__info">
                     <h3>Jaqueta Denim Sustentável</h3>
@@ -96,12 +99,11 @@
 
             <div class="cardProduto">
                 <div class="cardProduto__imagem">
-                    <img src="/img/produtos/vestido.png" alt="Vestido Linho Natural">
+                    <img src="/img/produtosHome/prod2.png" alt="Vestido Linho Natural">
                     <div class="cardProduto__badges">
                         <span class="badge badge--nova">✦ Nova</span>
-                        <span class="badge badge--ia">IA 88%</span>
                     </div>
-                    <button class="cardProduto__favorito">♡</button>
+                    
                 </div>
                 <div class="cardProduto__info">
                     <h3>Vestido Linho Natural</h3>
@@ -115,12 +117,11 @@
 
             <div class="cardProduto">
                 <div class="cardProduto__imagem">
-                    <img src="/img/produtos/calca.png" alt="Calça Cargo Reciclada">
+                    <img src="/img/produtosHome/prod3.png" alt="Calça Cargo Reciclada">
                     <div class="cardProduto__badges">
                         <span class="badge badge--seminovo">Seminovo</span>
-                        <span class="badge badge--ia">IA 95%</span>
                     </div>
-                    <button class="cardProduto__favorito">♡</button>
+                    
                 </div>
                 <div class="cardProduto__info">
                     <h3>Calça Cargo Reciclada</h3>
@@ -134,11 +135,11 @@
 
             <div class="cardProduto">
                 <div class="cardProduto__imagem">
-                    <img src="/img/produtos/blazer.png" alt="Blazer Alfaiataria Clássico">
+                    <img src="/img/produtosHome/prod4.png" alt="Blazer Alfaiataria Clássico">
                     <div class="cardProduto__badges">
                         <span class="badge badge--seminovo">Seminovo</span>
                     </div>
-                    <button class="cardProduto__favorito">♡</button>
+                    
                 </div>
                 <div class="cardProduto__info">
                     <h3>Blazer Alfaiataria Clássico</h3>
@@ -152,7 +153,7 @@
 
         </div>
 
-        <button class="bttnVerColecao">Ver Toda Coleção</button>
+        <a href="catalogo.html"><button class="bttnVerColecao">Ver Toda Coleção</button></a>
     </section>
 
     <!-- ======== PILARES DE SUSTENTABILIDADE ======== -->

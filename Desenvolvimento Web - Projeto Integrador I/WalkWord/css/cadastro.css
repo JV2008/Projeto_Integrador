@@ -12,6 +12,11 @@ body {
   overflow: hidden;
 }
 
+a{
+  text-decoration: none;
+  color: white;
+}
+
 .esquerda {
   width: 50%;
   height: 100vh;

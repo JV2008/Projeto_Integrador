@@ -14,5 +14,6 @@ form.addEventListener("submit", (e) => {
             email: email,
             password: password
         });
+        window.location.href = "pagina_produto.html";
     }
 });
