@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações - João da Silva</title>
+    <!-- Google Fonts for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Link to the shared premium profile stylesheet -->
+    <link rel="stylesheet" href="../css/impacto.css">
+    
+
+</head>
+<body>
+
+    <!-- GLOBAL NAVBAR -->
+    <header class="global-navbar">
+        <a href="home.html" id="praHome">
+            <section class="areaLogo">
+                <img src="../img/logoWW.png" alt="">
+                <h2>WalkWord</h2>
+            </section>
+        </a>
+
+        <ul>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="home.html#nov">Novidades</a></li>
+            <li><a href="catalogo.html">Seminovo</a></li>
+            <li><a href="impacto.html">Impacto</a></li>
+        </ul>
+
+        <section class="areaIcones">
+            <a href="catalogo.html"><img src="../img/iconesHeader/lupa.png" alt=""></a>
+            <a href="impacto.html"><img src="../img/iconesHeader/user.png" alt=""></a>
+            <a href="carrinho.html"><img src="../img/iconesHeader/bag.png" alt=""></a>
+        </section>
+    </header>
+
+    <div class="espacoSobHeader"></div>
+
+    <div class="dashboard-container">
+        
+        <!-- HEADER SECTION -->
+        <header class="profile-header">
+            <div class="avatar-circle">JD</div>
+            <div class="profile-info">
+                <h1 class="user-name">João da Silva</h1>
+                <div class="badge-row">
+                    <span class="badge-green">Nível: Guardião Verde</span>
+                    <span class="user-points">1.250 pontos</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- NAVIGATION TABS -->
+        <nav class="navigation-tabs">
+            <a href="impacto.html" class="tab-btn" id="tab-btn-impacto">Impacto</a>
+            <a href="pedidos.html" class="tab-btn" id="tab-btn-pedidos">Pedidos</a>
+            <a href="favoritos.html" class="tab-btn" id="tab-btn-favoritos">Favoritos</a>
+            <a href="preferencias.html" class="tab-btn" id="tab-btn-preferencias">Preferências</a>
+            <a href="configuracoes.html" class="tab-btn active" id="tab-btn-configuracoes">Configurações</a>
+        </nav>
+
+        <!-- TAB CONTENT CONTAINER -->
+        <main class="tab-content-wrapper">
+            
+            <div class="card-section">
+                <h2 class="section-title">Configurações da Conta</h2>
+                
+                <div class="config-item">
+                    <h3 class="config-label">E-mail</h3>
+                    <p class="config-value-text">joao.silva@email.com</p>
+                </div>
+
+                <hr class="config-divider">
+
+                <div class="config-item">
+                    <h3 class="config-label-large">Notificações</h3>
+                    
+                    <div class="checkbox-wrapper">
+                        <label class="custom-checkbox-container">
+                            <input type="checkbox" id="notify-promo" checked>
+                            <span class="checkbox-checkmark"></span>
+                            Receber novidades e promoções
+                        </label>
+                    </div>
+
+                    <div class="checkbox-wrapper">
+                        <label class="custom-checkbox-container">
+                            <input type="checkbox" id="notify-reports" checked>
+                            <span class="checkbox-checkmark"></span>
+                            Relatórios mensais de impacto
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- GLOBAL FOOTER -->
+    <footer>
+        <div class="footer__colunas">
+
+            <div class="footer__coluna">
+                <h4>Institucional</h4>
+                <ul>
+                    <li>Sobre Nós</li>
+                    <li>Como Funciona</li>
+                    <li>Trabalhe Conosco</li>
+                </ul>
+            </div>
+
+            <div class="footer__coluna">
+                <h4>Suporte</h4>
+                <ul>
+                    <li>FAQ</li>
+                    <li>Envios e Devoluções</li>
+                    <li>Fale Conosco</li>
+                </ul>
+            </div>
+
+            <div class="footer__coluna">
+                <h4>Sustentabilidade</h4>
+                <ul>
+                    <li>Hub Eco</li>
+                    <li>Nosso Impacto</li>
+                    <li>Certificações</li>
+                </ul>
+            </div>
+
+            <div class="footer__coluna">
+                <h4>Redes Sociais</h4>
+                <div class="footer__redesSociais">
+                    <span class="footer__iconeRede">📷</span>
+                    <span class="footer__iconeRede">f</span>
+                    <span class="footer__iconeRede">𝕏</span>
+                </div>
+                <h4 style="margin-top: 1rem;">Formas de Pagamento</h4>
+                <div class="footer__pagamentos">
+                    <span class="footer__pag">PIX</span>
+                    <span class="footer__pag">Cartão</span>
+                    <span class="footer__pag">Boleto</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer__rodape">
+            <span>© 2026 WalkWord. Todos os direitos reservados.</span>
+            <div class="footer__links">
+                <span>Privacidade</span>
+                <span>Termos de Uso</span>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- NOTIFICATION TOAST -->
+    <div id="toast" class="toast-notification">Configuração salva com sucesso!</div>
+
+    <script src="../js/configuracoes.js"></script>
+</body>
+</html>
