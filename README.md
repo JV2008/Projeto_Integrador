@@ -1,7 +1,7 @@
 <h1 align="center">
-   ![Logo do walkword](https://www.image2url.com/r2/default/images/1781227788668-85f8b277-4e1f-428b-aa62-19d424c8e443.png
-  <br/>
-  🌿 Walkword — Loja Sustentável
+  <img src="https://www.image2url.com/r2/default/images/1781227788668-85f8b277-4e1f-428b-aa62-19d424c8e443.png" alt="Logo do walkword"  <br/>
+<br>
+   🌿 Walkword — Loja Sustentável
 </h1>
 
 <p align="center">
