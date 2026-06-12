@@ -1,0 +1,173 @@
+
+        body {
+            background: #fff;
+        }
+
+        .confirmation-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 48px;
+            margin-bottom: 16px;
+        }
+
+        .confirmation-icon-inner {
+            background: #6fcf9744;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .confirmation-icon-inner svg {
+            width: 48px;
+            height: 48px;
+            color: #fff;
+        }
+
+        .confirmation-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #222;
+        }
+
+        .confirmation-number {
+            text-align: center;
+            color: #222;
+            font-size: 1.1rem;
+            margin-bottom: 32px;
+        }
+
+        .impacto-confirm {
+            background: #d9ede3;
+            border-radius: 12px;
+            max-width: 600px;
+            margin: 0 auto 24px auto;
+            padding: 32px 24px 24px 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .impacto-confirm h2 {
+            margin: 0 0 8px 0;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #223;
+        }
+
+        .impacto-confirm p {
+            margin: 0 0 24px 0;
+            color: #223;
+            font-size: 1.1rem;
+        }
+
+        .impacto-metricas {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 0;
+        }
+
+        .impacto-metrica {
+            background: #f4f5f7;
+            border-radius: 10px;
+            padding: 18px 32px 12px 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 140px;
+        }
+
+        .impacto-metrica .icon {
+            font-size: 2rem;
+            margin-bottom: 4px;
+        }
+
+        .impacto-metrica .valor {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2d5431;
+        }
+
+        .impacto-metrica .desc {
+            font-size: 1rem;
+            color: #7d7a75;
+        }
+
+        .proximos-passos {
+            background: #f8f6f1;
+            border-radius: 12px;
+            max-width: 600px;
+            margin: 0 auto 32px auto;
+            padding: 24px 24px 18px 24px;
+        }
+
+        .proximos-passos h3 {
+            margin: 0 0 16px 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #223;
+        }
+
+        .proximos-passos ul {
+            margin: 0;
+            padding-left: 18px;
+            color: #223;
+            font-size: 1rem;
+        }
+
+        .confirmation-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin-bottom: 48px;
+        }
+
+        .confirmation-buttons button {
+            min-width: 160px;
+            padding: 14px 0;
+            border-radius: 999px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .confirmation-buttons .btn-primary {
+            background-color: #2D5431;
+            color: white;
+            border: none;
+        }
+
+        .confirmation-buttons .btn-secondary {
+            background-color: #fff;
+            color: #1f2937;
+            border: 1px solid rgba(128, 128, 128, 0.18);
+        }
+
+        @media (max-width: 720px) {
+
+            .impacto-confirm,
+            .proximos-passos {
+                padding: 18px 8px;
+            }
+
+            .impacto-metricas {
+                flex-direction: column;
+                gap: 16px;
+                width: 100%;
+            }
+
+            .impacto-metrica {
+                min-width: 0;
+                width: 100%;
+            }
+
+            .confirmation-title {
+                font-size: 1.5rem;
+            }
+        }
+  

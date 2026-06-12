@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra</title>
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- IMask -->
+    <script src="https://cdn.jsdelivr.net/npm/imask@7"></script>
+    <link rel="stylesheet" href="../css/second.css">
+    <link rel="stylesheet" href="../css/home.css">
+
+
+</head>
+<body>
+
+     <header>
+         <section class="areaLogo">
+            <img src="../img/logoWW.png" alt="">
+            <h2>WalkWord</h2>
+        </section>
+
+        <ul>
+            <li>Catálogo</li>
+            <li>Novidades</li>
+            <li>Seminovo</li>
+            <li>Impacto</li>
+        </ul>
+
+        <section class="areaIcones">
+            <img src="../img/iconesHeader/lupa.png" alt="lupa">
+            <img src="../img/iconesHeader/user.png" alt="usuário">
+            <img src="../img/iconesHeader/bag.png" alt="carrinho">
+        </section>
+
+    </header>
+
+    <div class="espacoSobHeader"></div>
+
+    <section class="hero">
+        <h1>Finalizar Compra</h1>
+
+        <div class="stepper">
+            <div class="step active">1</div>
+            <div class="line"></div>
+            <div class="step active">2</div>
+            <div class="line"></div>
+            <div class="step">3</div>
+        </div>
+    </section>
+
+    <section class="entrega">
+        <h1>2. Forma de Pagamento</h1>
+
+        <div class="payment-tabs">
+            <button type="button" class="tab active"><span>📱</span> PIX</button>
+            <button type="button" class="tab"><span>💳</span> Cartão</button>
+            <button type="button" class="tab"><span>📄</span> Boleto</button>
+        </div>
+
+        <div class="pix-area" id="pixArea">
+            <div class="qr-code">QR Code PIX</div>
+            <p class="pix-text">Escaneie o QR Code com seu app de pagamentos</p>
+        </div>
+
+        <div class="cartao-area" id="cartaoArea" style="display: none;">
+            <div class="entrada">
+                <p>Número do Cartão</p>
+                <input type="text" id="inputNumeroCartao" placeholder="0000 0000 0000 0000" maxlength="19">
+            </div>
+
+            <div class="contato">
+                <div class="entrada">
+                    <p>Agência</p>
+                    <input type="text" id="inputAgencia" placeholder="0000-0">
+                </div>
+
+                <div class="entrada">
+                    <p>Nome do Titular</p>
+                    <input type="text" id="inputTitular" placeholder="NOME DO TITULAR">
+                </div>
+            </div>
+        </div>
+
+        <div class="boleto-area" id="boletoArea" style="display: none;">
+            <div class="boleto-info">
+                <p>Boleto bancário</p>
+                <p style="font-size: 0.9rem; color: #666;">Você receberá o boleto por e-mail para realizar o pagamento em até 3 dias úteis.</p>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button type="button" class="btn-secondary" onclick="window.location.href='../pages/first.html'">Voltar</button>
+            <button type="button" class="btn-primary" onclick="window.location.href='../pages/third.html'">Revisar Pedido</button>
+        </div>
+    </section>
+
+    <script src="../js/utils.js"></script>
+    <script src="../js/second.js"></script>
+
+    <section class="entrega">
+        <h3>Resumo do Pedido</h3>
+
+        <div class="descricao">
+            <img src="assets/photo-1572804013427-4d7ca7268217.jpg" alt="Blazer Alfaiataria Clássico">
+            <div class="descricao-texto">
+                <p class="produto-nome">Blazer Alfaiataria Clássico</p>
+                <p class="produto-qtd">Qtd: 1</p>
+            </div>
+            <p class="produto-preco">R$ 389.90</p>
+        </div>
+
+        <hr class="divider">
+
+        <div class="financeiro">
+            <div class="linha-financeira">
+                <p>Subtotal</p>
+                <p>R$ 389.90</p>
+            </div>
+            <div class="linha-financeira">
+                <p>Frete</p>
+                <p class="frete-gratis">Grátis</p>
+            </div>
+        </div>
+
+        <div class="total-pedido">
+            <p>Total</p>
+            <p class="total-valor">R$ 389.90</p>
+        </div>
+
+        <div class="impacto">
+            <div class="impacto-titulo">
+                <span class="icon-small">🌱</span>
+                <p>Impacto desta compra</p>
+            </div>
+
+            <div class="impacto-linha">
+                <div class="impacto-coluna">
+                    <span class="icon-small">💧</span>
+                    <p>-220L</p>
+                </div>
+
+                <div class="impacto-coluna">
+                    <span class="icon-small">👟</span>
+                    <p>-1.5kg</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
