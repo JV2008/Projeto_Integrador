@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  font-family: 'Inter', sans-serif;
+  height: 100vh;
+  background-color: #faf9f6;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.esquerda {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/login_img.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.16);
+  z-index: 1;
+}
+
+.conteudo_esquerda {
+  width: 80%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.botao_esquerda {
+  width: max-content;
+  padding: 10px 18px;
+  border-radius: 20px;
+  border: none;
+  background-color: #f2f3f1;
+  color: #4d5c41;
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.conteudo_esquerda h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  color: #162210;
+  line-height: 1.1;
+  margin-bottom: 15px;
+}
+
+.conteudo_esquerda h1 span {
+  font-weight: 600;
+}
+
+.conteudo_esquerda h1 em {
+  font-style: italic;
+  font-weight: 600;
+}
+
+.conteudo_esquerda p {
+  font-size: 1.15rem;
+  color: #3b4534;
+  line-height: 1.6;
+  max-width: 90%;
+}
+
+.direita {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.conteudo_direita {
+  width: 65%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo_direita {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #536047;
+  margin-bottom: 6px;
+}
+
+.subtitulo_direita {
+  font-size: 1.05rem;
+  color: #61625f;
+  margin-bottom: 25px;
+}
+
+.formulario_login {
+  display: flex;
+  flex-direction: column;
+}
+
+.label_campo {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #333;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.input_campo {
+  padding: 14px 18px;
+  border: none;
+  border-radius: 12px;
+  background-color: #f2f1ec;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  margin-bottom: 15px;
+  width: 100%;
+  outline: none;
+}
+
+.input_campo::placeholder {
+  color: #aaa;
+}
+
+.senha_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link_esqueceu {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #a84a3c;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.input_senha_container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input_senha_container .input_campo {
+  margin-bottom: 0;
+}
+
+.icone_senha {
+  position: absolute;
+  right: 20px;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.lembrar_container {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.checkbox_label {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #5d6159;
+  cursor: pointer;
+}
+
+.checkbox_campo {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #d4d4d1;
+  border-radius: 4px;
+  margin-right: 12px;
+  outline: none;
+  cursor: pointer;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox_campo:checked {
+  background-color: #536047;
+  border-color: #536047;
+}
+
+.checkbox_campo:checked::after {
+  content: '\f00c';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  color: white;
+  font-size: 0.7rem;
+}
+
+.botao_entrar {
+  padding: 15px;
+  background-color: #536047;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'Inter', sans-serif;
+}
+
+.botao_entrar:hover {
+  background-color: #404a37;
+}
+
+.texto_cadastro {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #61625f;
+  margin-bottom: 40px;
+  margin-top: 4vh;
+}
+
+.link_cadastro {
+  color: #7b4a3a;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.link_cadastro:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .esquerda {
+    display: none;
+  }
+  .direita {
+    width: 100%;
+  }
+  .conteudo_direita {
+    width: 85%;
+  }
+  .titulo_direita {
+    font-size: 2.2rem;
+  }
+}

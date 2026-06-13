@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido Confirmado</title>
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- IMask -->
+    <script src="https://cdn.jsdelivr.net/npm/imask@7"></script>
+    <link rel="stylesheet" href="../css/confirmation.css">
+   
+</head>
+
+<body>
+    <div class="confirmation-icon">
+        <div class="confirmation-icon-inner">
+            <svg fill="#2D5431" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path
+                        d="M16 0c-8.836 0-16 7.163-16 16s7.163 16 16 16c8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 30.032c-7.72 0-14-6.312-14-14.032s6.28-14 14-14 14 6.28 14 14-6.28 14.032-14 14.032zM22.386 10.146l-9.388 9.446-4.228-4.227c-0.39-0.39-1.024-0.39-1.415 0s-0.391 1.023 0 1.414l4.95 4.95c0.39 0.39 1.024 0.39 1.415 0 0.045-0.045 0.084-0.094 0.119-0.145l9.962-10.024c0.39-0.39 0.39-1.024 0-1.415s-1.024-0.39-1.415 0z">
+                    </path>
+                </g>
+            </svg>
+        </div>
+    </div>
+    <div class="confirmation-title">Pedido Confirmado!</div>
+    <div class="confirmation-number">Número do pedido: <b>24GB1M6PZ</b></div>
+
+    <div class="impacto-confirm">
+        <h2>Parabéns! 🌍</h2>
+        <p>Seu gesto salvou <b>250L de água</b> e evitou <b>1.5kg de CO₂</b></p>
+        <div class="impacto-metricas">
+            <div class="impacto-metrica">
+                <div class="icon">💧</div>
+                <div class="valor">250L</div>
+                <div class="desc">Água economizada</div>
+            </div>
+            <div class="impacto-metrica">
+                <div class="icon">🪁</div>
+                <div class="valor">1.5kg</div>
+                <div class="desc">CO₂ evitado</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="proximos-passos">
+        <h3>Próximos Passos</h3>
+        <ul>
+            <li>✓ Você receberá um e-mail com os detalhes do pedido</li>
+            <li>✓ Estimativa de entrega: 5-7 dias úteis</li>
+            <li>✓ Acompanhe o status no seu Dashboard</li>
+        </ul>
+    </div>
+
+    <div class="confirmation-buttons">
+        <button class="btn-secondary" onclick="window.location.href='../pages/home.html'">Fazer Nova Compra</button>
+    </div>
+
+    <script src="../js/utils.js"></script>
+    <script src="../js/confirmation.js"></script>
+</body>
+
+</html>
